@@ -1,0 +1,3 @@
+#https://stackoverflow.com/questions/35689628/starting-a-shell-in-the-docker-alpine-container
+
+docker run -it --rm alpine /bin/ash
