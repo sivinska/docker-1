@@ -1,0 +1,3 @@
+#https://docs.docker.com/storage/#more-details-about-mount-types
+
+docker volume create hatchery

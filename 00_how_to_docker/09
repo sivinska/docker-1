@@ -1,0 +1,7 @@
+#to run debian container: docker run -it --rm debian
+
+apt-get update
+apt-get install -y gcc
+apt-get install -y git
+
+#to test the instalion you can isntall vim, or clone something  from git.

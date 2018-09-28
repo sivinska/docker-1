@@ -1,0 +1,11 @@
+#basics of mySQL: https://docs.docker.com/samples/library/mysql/#docker-secrets
+# run container in background with the name : docker run -d --name spawning-pool
+# restart on failure:  --restart on-failure
+# to set a password && database name  of mySQL : 
+# -e MYSQL_ROOT_PASSWORD=Kerrigan MYSQL_DATABASE=zerlings
+# storing in volume: -v hatchery:/var/lib/mysql
+
+
+docker run -d --name spawning-pool --restart=on-failure  mysql \
+-e MYSQL_ROOT_PASSWORD=Kerrigan -e MYSQL_DATABASE=zerglings -v \
+hatchery:/var/lib/mysql mysql --default-auth=mysql_native_password -p
