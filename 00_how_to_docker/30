@@ -1,0 +1,3 @@
+docker service update marines --replicas=20
+
+#check logs: 

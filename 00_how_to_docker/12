@@ -5,7 +5,8 @@
 # -e MYSQL_ROOT_PASSWORD=Kerrigan MYSQL_DATABASE=zerlings
 # storing in volume: -v hatchery:/var/lib/mysql
 
-
-docker run -d --name spawning-pool --restart=on-failure  mysql \
--e MYSQL_ROOT_PASSWORD=Kerrigan -e MYSQL_DATABASE=zerglings -v \
-hatchery:/var/lib/mysql mysql --default-auth=mysql_native_password -p
+docker run --name spawning-pool -d \
+--env MYSQL_ROOT_PASSWORD=Kerrigan \
+--env MYSQL_DATABASE=zerglings     \
+--restart=on-failure               \
+--volume=hatchery:/var/lib/mysql mysql

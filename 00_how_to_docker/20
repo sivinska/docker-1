@@ -1,0 +1,5 @@
+#https://docs.docker.com/get-started/part4/#create-a-cluster
+#Docker Swarm is a clustering and scheduling tool for Docker containers. 
+#With Swarm, IT administrators and developers can establish and manage a cluster of Docker nodes as a single virtual system.
+
+docker-machine ssh Char "docker swarm init --advertise-addr $(docker-machine ip Char)"

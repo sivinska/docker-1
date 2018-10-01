@@ -1,0 +1,13 @@
+#https://docs.docker.com/engine/swarm/join-nodes/
+
+docker-machine ssh Aiur "docker swarm join --token $(docker swarm join-token worker) $(docker-machine ip Char):2377"
+
+#to see the status of swarm : docker node ls
+#
+#
+#The MANAGER STATUS column shows node participation in the Raft consensus:
+#
+#No value indicates a worker node that does not participate in swarm management.
+#Leader means the node is the primary manager node that makes all swarm management and orchestration decisions for the swarm.
+#Reachable means the node is a manager node participating in the Raft consensus quorum. If the leader node becomes unavailable, the node is eligible for election as the new leader.
+#Unavailable means the node is a manager that can’t communicate with other managers. If a manager node becomes unavailable, you should either join a new manager node to the swarm or promote a worker node to be a manager.

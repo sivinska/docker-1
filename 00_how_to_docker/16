@@ -1,0 +1,2 @@
+#https://success.docker.com/article/view-realtime-container-logging
+docker logs -f spawning-pool
