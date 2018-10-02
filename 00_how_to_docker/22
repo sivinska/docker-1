@@ -1,6 +1,6 @@
 #https://docs.docker.com/engine/swarm/join-nodes/
 
-docker-machine ssh Aiur "docker swarm join --token $(docker swarm join-token worker) $(docker-machine ip Char):2377"
+docker-machine ssh Aiur "docker swarm join --token $(docker swarm join-token worker -q) $(docker-machine ip Char):2377"
 
 #to see the status of swarm : docker node ls
 #

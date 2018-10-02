@@ -1,3 +1,13 @@
 docker service update marines --replicas=20
 
-#check logs: 
+#or docker service scale -d marines=20
+
+
+#check logs:
+#docker service logs --follow $(docker service ps --filter "name=marines.1" marines -q)
+#
+#
+#if it doesn't work because of service Shutdownt, use this:
+#docker service logs \
+#--follow            \
+#$(docker service ps --no-trunc marines --filter "name=marines.2" | grep -v "Shutdown" | grep -v "ID" | cut -d ' ' -f 1)

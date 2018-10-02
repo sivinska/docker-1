@@ -1,1 +1,6 @@
 docker service logs --follow $(docker service ps --filter "name=engineering-bay.1" engineering-bay -q)
+
+#if it doesnt work because of service shutdown, run this:
+#docker service logs \
+#--follow            \
+#$(docker service ps --no-trunc engineering-bay --filter "name=engineering-bay.2" | grep -v "Shutdown" | grep -v "ID" | cut -d ' ' -f 1)
