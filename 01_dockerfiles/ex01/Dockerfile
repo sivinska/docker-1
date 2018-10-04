@@ -24,3 +24,6 @@ WORKDIR teamspeak3-server_linux_amd64
 RUN touch .ts3server_license_accepted
 
 ENTRYPOINT sh ts3server_minimal_runscript.sh
+
+#built it: dokcer build -t ex01 .
+#test it: docker run --rm -it -p 9987:9987/udp -p 10011:10011 -p 30033:30033 ex01
