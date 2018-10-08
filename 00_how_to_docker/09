@@ -4,4 +4,4 @@ apt-get update
 apt-get install -y gcc
 apt-get install -y git
 
-#to test the instalion you can install vim (apt-get install -y vim), or clone something from git.
+#to test the installtion you can install vim (apt-get install -y vim), or clone something from git.

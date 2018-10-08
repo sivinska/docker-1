@@ -1,1 +1,3 @@
 docker run hello-world
+
+#Docker is a computer program that performs operating-system-level virtualization, also known as "containerization". Docker is used to run software packages called "containers".

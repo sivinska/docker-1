@@ -1,1 +1,4 @@
 docker run -d -p 5000:80 --name overlord --restart=always nginx
+
+
+#A Docker image is a file, comprised of multiple layers, used to execute code in a Docker container. 

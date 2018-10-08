@@ -1,3 +1,9 @@
+#before starting we need to modify the VM, otherwise it will not work properly. Run following lines:
+#docker-machine stop Char
+#VBoxManage modifyvm Char --cpus 2
+#VBoxManage modifyvm Char --memory 4096
+#docker-machine start Char
+
 FROM ubuntu:16.04
 
 RUN apt-get update -q

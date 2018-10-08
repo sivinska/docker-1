@@ -1,1 +1,1 @@
-docker rm $(docker image ls -q)
+docker rmi --force $(docker image ls -q)
